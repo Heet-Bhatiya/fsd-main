@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Form - Enter Income</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="form-container">
+      <h1>💰 Tax Form - Enter Your Income</h1>
+
+      <% if (error) { %>
+        <div class="error"><%= error %></div>
+      <% } %>
+
+      <form action="/calculate" method="POST">
+        <label>Income from Source 1:</label>
+        <input type="number" step="0.01" name="income1" placeholder="Enter amount" required />
+
+        <label>Income from Source 2:</label>
+        <input type="number" step="0.01" name="income2" placeholder="Enter amount" required />
+
+        <button type="submit">Calculate Total</button>
+      </form>
+    </main>
+  </body>
+</html>
