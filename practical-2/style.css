@@ -1,0 +1,88 @@
+body {
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  font-family: 'Inter', 'Roboto', Arial, sans-serif;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.weather-app {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  max-width: 360px;
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.weather-app h1 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.weather-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.weather-form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.3);
+  color: #212529;
+  transition: background 0.3s ease;
+}
+
+.weather-form input::placeholder {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.weather-form input:focus {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.weather-form button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weather-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.weather-form button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.weather-result {
+  min-height: 32px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}

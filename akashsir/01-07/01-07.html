@@ -1,0 +1,57 @@
+ <!-- localstorage.js -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+<script>
+    function saveObj(){
+        let a={
+            name: "jagdish",
+            gender:"male",
+            age:"25",
+            city:"dwarka",
+        }
+        var mydata = JSON.stringify(a)
+        localStorage.setItem("usera",mydata)
+    }
+    function saveData(){
+        localStorage.setItem("name","jagdish")
+        localStorage.setItem("age","25")
+        localStorage.setItem("city","Dwarka")
+    }
+
+    function getData(){
+        let a = localStorage.getItem("name")
+        document.getElementById("ans").innerHTML = "name is " + a
+    }
+    function getObjData(){
+        let a= localStorage.getItem("usera")
+        let mydata = JSON.parse(a)
+        document.getElementById("ans").innerHTML = "name is "+ mydata.name + " gender is "+ mydata.gender
+    }
+    function removedata(){
+        localStorage.removeItem("name")
+        localStorage.removeItem("age")
+        localStorage.removeItem("city")
+    }
+    function removeall(){
+        localStorage.clear()
+        document.getElementById("ans").innerHTML =" removed all key"
+    }
+</script>
+</head>
+<body>
+    <p id="ans"></p>
+    <input type="button" value="Save" onclick="saveData()"/>
+    <input type="button" value="Save Object" onclick="saveObj()"/>
+    <input type="button" value=" get " onclick="getData()"/>
+    <input type="button" value="get Object" onclick="getObjData()"/>
+    <input type="button" value=" remove " onclick="removedata()"/>
+    <input type="button" value=" remove all " onclick="removeall()"/>
+
+</body>
+</html>

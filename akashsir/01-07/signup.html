@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+    <script>
+       function submitform() {
+            let name = document.getElementById("name").value;
+            let gender=document.getElementById("gender").value
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+            let mobile = document.getElementById("mobile").value;
+            if (name === "" || email === "" || password === "" || mobile === "") {
+                alert("Please fill all fields");
+                return;
+            }
+            localStorage.setItem("name",name)
+            localStorage.setItem("gender",gender)
+            localStorage.setItem("email",email)
+            localStorage.setItem("password",password)
+            localStorage.setItem("mobile",mobile)
+            alert("Data saved successfully");
+        }
+    </script>
+</head>
+<body>
+    <input type="TextBox" id="name" placeholder="Enter your name" required>
+    <br>
+    <input type="radio"   id="gender" value="male" >Male
+     <input type="radio" id="gender" value="female">feMale
+     <input type="radio"  id="gender" value="other">other
+     <br>
+      <input type="TextBox" id="email" placeholder="Enter your email" required>
+       <input type="TextBox" id="password" placeholder="Enter your password" required>
+        <input type="TextBox" id="mobile" placeholder="Enter your mobile" required>
+    <br> 
+    <input type="button" value="signup" onclick="submitform()"/>
+
+</body>
+</html>
+
