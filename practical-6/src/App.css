@@ -1,15 +1,16 @@
 /* Minimal, professional To-Do List styles */
 :root {
-  --color-primary: #6f42c1;
-  --color-bg: #1a1333;
-  --color-card: #2d2050;
-  --color-input: #251a3a;
-  --color-btn: #7c4dff;
-  --color-btn-hover: #5f36b7;
-  --color-text: #fff;
-  --color-accent: #b39ddb;
-  --color-border: #3d2e5a;
+  --color-primary: #00bfff;
+  --color-bg: #000000;
+  --color-card: #111111;
+  --color-input: #1a1a1a;
+  --color-btn: #007bff;
+  --color-btn-hover: #0099ff;
+  --color-text: #eaeaea;
+  --color-accent: #00cfff;
+  --color-border: #262626;
 }
+
 
 body {
   background: var(--color-bg);
